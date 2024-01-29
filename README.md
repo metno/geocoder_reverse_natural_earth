@@ -1,5 +1,8 @@
 # geocoder_reverse_natural_earth
-implementations of readers for the pyaerocom project using pyaro as interface
+
+Reverse lookup of locations using Natural-Earths administrative boundary shp-database. This allows
+a simple lookup from geo-location in latitude/longitude to a countries ISO2 code.
+
 
 ## License
 
@@ -11,9 +14,15 @@ see https://www.naturalearthdata.com/about/terms-of-use/ .
 ![NaturalEarth-logo](NEV-Logo-color.png "Natural Earth Logo")
 
 ## Installation
-`python -m pip install 'pyaro-readers@git+https://github.com/metno/geocoder_reverse_natural_earth.git'`
 
-This will install geocoder_reverse_natural_earth and all their dependencies.
+The following will install geocoder_reverse_natural_earth and all dependencies.
+
+`python -m pip install geocoder_reverse_natural_earth`
+
+or for the latest development version:
+
+`python -m pip install 'geocoder_reverse_natural_earth@git+https://github.com/metno/geocoder_reverse_natural_earth.git'`
+
 
 
 ## Usage
