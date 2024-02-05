@@ -13,6 +13,7 @@ class TestGeocoderRevereseNE(unittest.TestCase):
         with self.assertRaises(Geocoder_Reverse_Exception):
             geo.lookup(78.2361926, 15.3692614)
 
-    def test_lookup(self):
+    def test_lookup_nearest(self):
         geo = Geocoder_Reverse_NE()
-        self.assertEqual(geo.lookup_nearest(78.2361926, 15.3692614)["ISO_A2_EH"], "NO")
+        #        self.assertEqual(geo.lookup_nearest(78.2361926, 15.3692614)["ISO_A2_EH"], "NO")
+        self.assertEqual(geo.lookup_nearest(45.31390, 12.508300)["ISO_A2_EH"], "IT")
