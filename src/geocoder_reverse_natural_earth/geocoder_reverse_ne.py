@@ -60,9 +60,15 @@ class Geocoder_Reverse_NE:
         point = shapely.geometry.Point((longitude, latitude))
         objs = self.intersect(point)
         if len(objs) == 0:
-            nearest = list(self._index.nearest(point.bounds, 1, objects=True))
-            props, geom = nearest[0].object
-            return props
+            # double-check the closest bounding boxes with real geometry
+            nearest = self._index.nearest(point.bounds, 25, objects=True)
+            prop_distances = []  # list of tuples
+            for n in nearest:
+                props, geom = n.object
+                dist = point.distance(geom)
+                prop_distances.append((props, dist))
+            prop_distances.sort(key=lambda x: x[1])
+            return prop_distances[0][0]
         return objs[0]
 
 
