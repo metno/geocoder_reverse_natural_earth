@@ -23,7 +23,9 @@ or for the latest development version:
 
 `python -m pip install 'geocoder_reverse_natural_earth@git+https://github.com/metno/geocoder_reverse_natural_earth.git'`
 
-
+As of version 0.0.3, this package can run with the pure-python pyshp shape-reader and shapely's
+STRtree, thus removing the dependency on fiona/gdal and rtree. If fiona and gdal is installed
+anyway, it will continue using the old dependencies.
 
 ## Usage
 geocoder_reverse_natural_earth is small helper to identify country codes for obs networks that don't mention the

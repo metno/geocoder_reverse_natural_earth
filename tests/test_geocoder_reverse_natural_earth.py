@@ -1,8 +1,7 @@
 import unittest
-from geocoder_reverse_natural_earth import (
-    Geocoder_Reverse_NE,
-    Geocoder_Reverse_Exception,
-)
+
+from geocoder_reverse_natural_earth import (Geocoder_Reverse_Exception,
+                                            Geocoder_Reverse_NE)
 
 
 class TestGeocoderRevereseNE(unittest.TestCase):

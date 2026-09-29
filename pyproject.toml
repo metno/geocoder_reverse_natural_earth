@@ -9,7 +9,7 @@ authors = [{ name = "MET Norway" }]
 description = "implementations of geocoder_reverse using natural_earth shape-files"
 readme = { file = "README.md", content-type = "text/markdown" }
 requires-python = ">=3.9"
-dependencies = ["fiona", "shapely", "rtree"]
+dependencies = ["pyshp", "shapely"]
 classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.9",
@@ -28,6 +28,10 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/metno/geocoder_reverse_natural_earth"
+
+[project.optional-dependencies]
+fiona = ["fiona", "rtree"]
+
 
 [tool.setuptools]
 package-dir = { "" = "src" }
