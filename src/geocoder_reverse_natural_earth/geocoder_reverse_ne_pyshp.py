@@ -52,9 +52,10 @@ class Geocoder_Reverse_NE:
     def lookup(self, latitude: float, longitude: float) -> dict():
         """Lookup coordinates for a country
 
-        :param self: _description_
-        :raises Geocoder_Reverse_Exception: _description_
-        :return: _description_
+        :param latitude: latitude of the point to lookup
+        :param longitude: longitude of the point to lookup
+        :raises Geocoder_Reverse_Exception: if the coordinates are not inside any of the NE-admin shapefile
+        :return: properties of the country containing the coordinates
         """
         point = shapely.geometry.Point((longitude, latitude))
         objs = self.intersect(point)
