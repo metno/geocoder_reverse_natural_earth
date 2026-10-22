@@ -27,6 +27,16 @@ As of version 0.0.3, this package can run with the pure-python pyshp shape-reade
 STRtree, thus removing the dependency on fiona/gdal and rtree. If fiona and gdal is installed
 anyway, it will continue using the old dependencies.
 
+## Testing
+
+Install the package from a local checkout and run the test suite:
+
+```sh
+python -m pip install .
+python -m unittest discover -s tests
+```
+
+
 ## Usage
 geocoder_reverse_natural_earth is small helper to identify country codes for obs networks that don't mention the
 countrycode of a station in their location data
