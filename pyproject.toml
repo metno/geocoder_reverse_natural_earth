@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "geocoder_reverse_natural_earth"
-version = "0.0.3"
+version = "0.0.4.dev0"
 authors = [{ name = "MET Norway" }]
 description = "implementations of geocoder_reverse using natural_earth shape-files"
 readme = { file = "README.md", content-type = "text/markdown" }
