@@ -23,6 +23,18 @@ or for the latest development version:
 
 `python -m pip install 'geocoder_reverse_natural_earth@git+https://github.com/metno/geocoder_reverse_natural_earth.git'`
 
+As of version 0.0.3, this package can run with the pure-python pyshp shape-reader and shapely's
+STRtree, thus removing the dependency on fiona/gdal and rtree. If fiona and gdal is installed
+anyway, it will continue using the old dependencies.
+
+## Testing
+
+Install the package from a local checkout and run the test suite:
+
+```sh
+python -m pip install .
+python -m unittest discover -s tests
+```
 
 
 ## Usage
